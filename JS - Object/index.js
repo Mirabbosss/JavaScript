@@ -87,3 +87,24 @@
 // }
 
 // console.log(add(num))
+
+
+
+// 4-masala
+
+// let AboutMe = {
+//     name: "Mirabbos",
+//     surname: "Mirtursunov",
+//     age: 22,
+//     hobbie: "Coding",
+//     isMarried: "True",
+//     address: {
+//         city: "Tashkent",
+//         street: "Nurobod",
+//         homenumber: 13
+//     }
+// }
+
+// for (let element in AboutMe) {
+//     console.log(`${element}:${AboutMe[element]}`);
+// }

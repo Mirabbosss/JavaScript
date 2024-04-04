@@ -488,10 +488,3 @@ console.log(person.hobbies[0]); // "Listening music"
 person.greet(); // "Hello, my name is Mirabbos."
 ```
 ![alt text](image-11.png)
-
-
-
-
-
-
-
