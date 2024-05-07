@@ -96,3 +96,128 @@
 // }
 
 // operatorAniqla(cod)
+
+
+
+// Function constructors
+// 5-masala. "Oson1" nomi function constructor e'lon qiling. Bu klassda "a" integer o'zgaruvchi bor. outputA() - bu function constructordagi "a" ni qiymatini print qilsin.
+
+// function Oson1(a) {
+//     this.a = a;
+//     this.outputA = function () {
+//         console.log(this.a)
+//     };
+// }
+
+// let oson1 = new Oson1(10);
+// oson1.outputA();
+
+
+
+// 6-masala. "Oson2" nomli function constructor e'lon qiling. Bu function constructorda "a" va "b" integer o'zgaruvchilari bor. summa() - bu funksiya function constructordagi "a" va "b" yig'indisini toping.
+
+// function Oson2(a, b) {
+//     this.a = a;
+//     this.b = b;
+//     this.summa = function() {
+//         return a + b
+//     }
+// }
+
+// let oson2 = new Oson2(5, 6)
+// console.log(oson2.summa());
+
+
+
+// 7-masala. 
+
+// let firstName = prompt("Ismingizni kiriting:");
+// let lastName = prompt("Familiyangizni kiriting:");
+// let age = +prompt("Yoshingizni kiriting:")
+
+// function UserData(firstName, lastName, age) {
+//     this.Ism = firstName;
+//     this.Familiya = lastName;
+//     this.Yosh = age;
+
+//     return `Ism: ${this.Ism}\nFamiliya: ${this.Familiya}\nYosh: ${this.Yosh}`;
+// }
+
+// let result = new UserData(firstName, lastName, age)
+// console.log(result);
+
+
+
+// 8-masala.
+
+// let a = prompt("a ni kiriting:");
+// let b = prompt("b ni kiriting:");
+// let c = prompt("c ni kiriting:");
+
+// function FindMax(a, b, c) {
+//     let bigNumber;
+//     if (a > b && a > c) {
+//         bigNumber = a;
+//     } else if (b > c && b > a) {
+//         bigNumber = b;
+//     } else {
+//         bigNumber = c;
+//     }
+
+//     this.max = function() {
+//         console.log(bigNumber);
+//     };
+// }
+
+// let result = new FindMax(a, b, c);
+// result.max();
+
+
+
+// 9-masala.
+
+// let word = ("So'z kiriting:");
+// let letter = ("Harf kiriting:");
+
+// function FindCountLetter(word, letter) {
+//     this.word = word;
+//     this.letter = letter;
+//     this.findCountLetters = function () {
+//         let count = 0;
+
+//         // for(let item of this.word) {
+//         //     if(item === this.letter) {
+//         //         count++
+//         //     }
+//         // }
+
+//         this.word.forEach(item => {
+//             if (item === this.letter) {
+//                 count++
+//             }
+//         })
+//     }
+// }
+
+// let result = new FindCountLetter(word, letter);
+
+
+
+// 10-masala.
+
+// function ListSum(list) {
+//     this.list = list;
+//     this.count = 0;
+
+//     this.sum = function() {
+//         // for (let item of this.list) {
+//         //     this.count += item;
+//         // }
+
+//         this.count = this.list.reduce((sum, value) => sum + value, 0)
+//     };
+// }
+
+// let listSums = new ListSum([1, 2, 3, 4, 5, 6, 7]);
+// listSums.sum();
+// console.log(listSums.count);
