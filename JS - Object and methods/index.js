@@ -108,3 +108,75 @@
 // for (let element in AboutMe) {
 //     console.log(`${element}:${AboutMe[element]}`);
 // }
+
+
+
+// Object methods
+
+// let user = {
+//     name: "Mirabbos",
+//     age: 22
+// }
+
+// // defineProperty
+// Object.defineProperty(user, "country", {
+//     value: "Russia",
+//     writable: true
+// })
+
+// user.country = "UK";
+// console.log(user);
+
+
+
+// defineProperties
+// Object.defineProperties(user, {
+//     country: {
+//         value: "Russia",
+//         writable: false
+//     },
+//     email: {
+//         value: "mirabbos@gmail.com",
+//         writable: true
+//     }
+// })
+
+// user.email = "newmirabbos@gmail.com"
+// console.log(user);
+
+
+
+
+
+
+
+
+
+
+// Method Object.groupBy
+
+let cars = [
+    {
+        name: "BMW",
+        price: 1000000,
+        color: "black"
+    },
+    {
+        name: "Mercedes",
+        price: 2000000,
+        color: "white"
+    },
+    {
+        name: "Audi",
+        price: 3000000,
+        color: "red"
+    },
+    {
+        name: "Volvo",
+        price: 4000000,
+        color: "black"
+    }
+]
+
+const result = Object.groupBy(cars, ({color}) => color)
+console.log(result);

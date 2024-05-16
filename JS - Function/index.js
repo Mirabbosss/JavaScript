@@ -221,3 +221,22 @@
 // let listSums = new ListSum([1, 2, 3, 4, 5, 6, 7]);
 // listSums.sum();
 // console.log(listSums.count);
+
+
+// Callback
+
+let a = 5;
+let b = 4;
+
+function sumNumbers(x, y) {
+    console.log("Kichik funksiya");
+    return x + y;
+}
+
+function findPeremeter(fn, a, b) {
+    console.log("Katta fynksiya");
+    return fn(a, b) * 2;
+}
+
+let result = findPeremeter(sumNumbers, a, b);
+console.log(result);
