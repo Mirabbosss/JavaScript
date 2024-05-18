@@ -6,6 +6,7 @@ let result = document.querySelector('#result');
 
 const ALL_TODOS = JSON.parse(localStorage.getItem("todos")) || [];
 
+// Create new todo
 function NewTodo(nameWork, hours, minutes, seconds, time){
     this.id = ALL_TODOS.length + 1;
     this.name = nameWork
@@ -15,6 +16,7 @@ function NewTodo(nameWork, hours, minutes, seconds, time){
     this.time = time
 }
 
+// Add a new todo
 const addNewTodo = function() {
     let nameWork = prompt('Vazifa nomini kiriting:');
     let timeHour = new Date().getHours()
@@ -27,6 +29,7 @@ const addNewTodo = function() {
     localStorage.setItem("todos", JSON.stringify(ALL_TODOS))
 };
 
+// Show todos
 const showTodos = function(){
     result.innerHTML = ""
     
@@ -45,8 +48,8 @@ const deleteTodo = function() {
     }
 }
 
+// Sort Todos
 let sorted = false;
-
 const sortTodos = function() {
     if(sorted === false){
         sorted = true;
