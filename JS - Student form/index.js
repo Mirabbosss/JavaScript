@@ -5,7 +5,7 @@ const ageInput = document.getElementById('age');
 const studentListDiv = document.getElementById('student-list');
 
 form.onsubmit = function(event) {
-    event.preventDefault();
+    event.preventDefault(); 
 
     const firstName = firstNameInput.value;
     const lastName = lastNameInput.value;
@@ -24,7 +24,6 @@ form.onsubmit = function(event) {
     localStorage.setItem('students', JSON.stringify(students));
 
     updateStudentList();
-
     form.reset();
 };
 
@@ -32,20 +31,17 @@ function updateStudentList() {
     const students = JSON.parse(localStorage.getItem('students')) || [];
 
     studentListDiv.innerHTML = '';
-
     students.forEach((student, index) => {
         const studentElement = document.createElement('div');
-        studentElement.innerText = `\n\nIsm: ${student.firstName}\nFamiliya: ${student.lastName}\nYosh: ${student.age}\n================================================\n`;
+        studentElement.innerText = `Ism: ${student.firstName}, Familiya: ${student.lastName}, Yosh: ${student.age}`;
 
         const deleteButton = document.createElement('button');
-        deleteButton.innerText = 'O\'chirish';
+        deleteButton.innerText = "O'chirish";
         deleteButton.onclick = function() {
             students.splice(index, 1);
             localStorage.setItem('students', JSON.stringify(students));
-
             updateStudentList();
         };
-
         studentElement.appendChild(deleteButton);
         studentListDiv.appendChild(studentElement);
     });
