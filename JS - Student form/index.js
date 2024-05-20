@@ -33,7 +33,7 @@ function updateStudentList() {
     studentListDiv.innerHTML = '';
     students.forEach((student, index) => {
         const studentElement = document.createElement('div');
-        studentElement.innerText = `Ism: ${student.firstName}, Familiya: ${student.lastName}, Yosh: ${student.age}`;
+        studentElement.innerText = `Ism: ${student.firstName}\nFamiliya: ${student.lastName}\nYosh: ${student.age}`;
 
         const deleteButton = document.createElement('button');
         deleteButton.innerText = "O'chirish";
