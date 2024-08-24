@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOKING</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+<body>
+   <div class="container">
+    <button class="button button--dark" id="add-room-btn">Add room</button>
+    <form class="form add-room-form" id="add-room-form">
+        <input required type="number" id="room-number" placeholder="Enter room number">
+        <select  required="required" id="room-type">
+            <option value="" selected disabled>Select room type</option>
+            <option value="standart">Standart</option>
+            <option value="lux">Lux</option>
+            <option value="presidental">Presidental</option>
+        </select>
+        <select required="required" id="room-floor">
+            <option value="" selected disabled>Select floor</option>
+            <option value="1">1-floor</option>
+            <option value="2">2-floor</option>
+            <option value="3">3-floor</option>
+        </select>
+        <input required type="number" id="room-price" placeholder="Enter room price per person">
+        <label for="room-capacity">Room capacity</label>
+        <div class="form__group">
+            <input required id="room-capacity" type="range" step="1" min="1" max="10" value="1">
+            <span id="range-indicator">1</span>
+        </div>
+        <div>
+            <button class="button button--dark" type="submit">Create new room</button>
+            <button id="cancel-form-btn" type="reset" class="button button--light" type="submit">Cancel</button>
+        </div>
+    </form>
+    <div class="room-table-wrapper">
+        <table id="room-table">
+            <thead>
+                <tr>
+                    <th>Room No</th>
+                    <th>Room type</th>
+                    <th>Room floor</th>
+                    <th>Room State</th>
+                    <th>Room Capacity</th>
+                    <th>Room Price Per Person</th>
+                    <th>Booked from</th>
+                    <th>Manage rooms</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+       </div>
+   </div>
+
+  
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./script/app.js"></script>
+</body>
+</html>
